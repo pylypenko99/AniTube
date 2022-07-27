@@ -1,0 +1,20 @@
+[versions]
+activity = "1.6.0-alpha05"
+compose-ui = "1.3.0-alpha01"
+gradleplugin = "7.2.0"
+kotlin = "1.7.0"
+material3 = "1.0.0-alpha14"
+
+[libraries]
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
+compose-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose-ui" }
+compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose-ui" }
+
+[bundles]
+compose = ["activity-compose", "compose-material3", "compose-preview", "compose-tooling"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "gradleplugin" }
+android-library = { id = "com.android.library", version.ref = "gradleplugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
